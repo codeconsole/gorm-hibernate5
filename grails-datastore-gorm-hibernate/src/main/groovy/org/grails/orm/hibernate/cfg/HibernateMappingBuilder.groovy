@@ -249,6 +249,16 @@ class HibernateMappingBuilder implements MappingConfigurationBuilder<Mapping, Pr
         mapping.autoTimestamp = b
     }
 
+    @CompileStatic
+    void dateCreated(String dateCreated) {
+        mapping.dateCreated  = dateCreated
+    }
+
+    @CompileStatic
+    void lastUpdated(String lastUpdated) {
+        mapping.lastUpdated = lastUpdated
+    }
+
     /**
      * <p>Configures whether to use versioning for optimistic locking
      * <code> { version false }
